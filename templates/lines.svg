@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 3200 1800" width="3200" height="1800">
+  <rect id="background" x="0" y="0" width="3200" height="1800" transform="matrix(1,0,0,1,0,0)"/>
+  <rect id="obj0" x="300" y="0" width="50" height="1800" transform="matrix(1,0,0,1,0,0)" />
+  <rect id="obj1" x="400" y="0" width="50" height="1800" transform="matrix(1,0,0,1,0,0)" />
+  <rect id="obj2" x="500" y="0" width="50" height="1800" transform="matrix(1,0,0,1,0,0)" />
+  <rect id="obj3" x="600" y="0" width="50" height="1800" transform="matrix(1,0,0,1,0,0)" />
+  <rect id="obj4" x="700" y="0" width="50" height="1800" transform="matrix(1,0,0,1,0,0)" />
+  <rect id="obj5" x="800" y="0" width="50" height="1800" transform="matrix(1,0,0,1,0,0)" />
+  <rect id="obj6" x="900" y="0" width="50" height="1800" transform="matrix(1,0,0,1,0,0)" />
+  <rect id="obj7" x="1000" y="0" width="50" height="1800" transform="matrix(1,0,0,1,0,0)" />
+</svg>

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+color0=#FFFFFF
+color1=#F07178
+color2=#C3E88D
+color3=#FFCB6B
+color4=#82AAFF
+color5=#C792EA
+color6=#89DDFF
+color7=#959DCB
+background=#292D3E
+colors=($color0 $color1 $color2 $color3 $color4 $color5 $color6 $color7)

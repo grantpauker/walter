@@ -1,0 +1,25 @@
+#/usr/bin/env bash
+source templates/pallet
+create_wallpaper(){
+	echo $1
+	if [[ "$#" == "0" ]] || [ ! -f $1 ]; then
+		echo "File does not exist"
+		return
+	fi
+	if ! grep -q "\<svg" $1 || ! grep -q "id=\('\|\"\)obj[0-7]\('\|\"\)" $1 || ! grep -q "id=\('\|\"\)background\('\|\"\)" $1; then
+		echo "File does not contain necessary contents"
+		return
+	fi
+	cp $1 tmp.svg
+	sed -i 's/fill="[^"]*"//g' tmp.svg
+	sed -i -E -e "s/id=(\"|')background(\"|')/fill=\"$background\"/g" tmp.svg
+	for i in {0..7}; do
+		sed -i -E -e "s/id=(\"|')obj$i(\"|')/fill=\"${colors[i]}\"/g" tmp.svg
+	done
+	f=$(basename $1)
+	convert tmp.svg ${f%.*}.png
+	rm tmp.svg
+}
+for f in templates/*.svg; do
+	create_wallpaper $f
+done
