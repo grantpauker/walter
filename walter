@@ -6,7 +6,11 @@ create_wallpaper(){
 		echo "File does not exist"
 		return
 	fi
-	if ! grep -q "\<svg" $1 || ! grep -q "id=\('\|\"\)obj[0-7]\('\|\"\)" $1 || ! grep -q "id=\('\|\"\)background\('\|\"\)" $1; then
+	for i in {0..7}; do
+		grep -q "id=\('\|\"\)obj$i\('\|\"\)" $1
+	done
+	objects=$?
+	if ! grep -q "\<svg" $1 || ! grep -q "id=\('\|\"\)obj[0-7]\('\|\"\)" $1 || [[ "$objects" != "0" ]]; then
 		echo "File does not contain necessary contents"
 		return
 	fi
